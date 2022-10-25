@@ -6,7 +6,7 @@ global.Task = require('./api/models/taskModel')
 const routes = require('./api/routes/taskRoutes')
 
 mongoose.connect(
-    'mongodb://localhost:27017/WebHouse',
+    'mongodb+srv://WebHouse:0988312131@cluster0.a6krzpb.mongodb.net/?retryWrites=true&w=majority',
     { useNewUrlParser: true }
 )
 
