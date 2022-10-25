@@ -10,7 +10,7 @@ mongoose.connect(
     { useNewUrlParser: true }
 )
 
-const port = process.env.port || 3000;
+const port = process.env.port || 9999;
 const app = express();
 
 app.use(cors());
