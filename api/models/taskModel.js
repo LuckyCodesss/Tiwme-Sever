@@ -11,6 +11,10 @@ const taskSchema = new Schema(
         task2: {
             type: String,
             required: 'task2 cannot be blank'
+        },
+        username: {
+            type: String,
+            required: 'task3 cannot be blank'
         }
     },
     { collection: 'task' }
