@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 global.Task = require('./api/models/taskModel')
 const routes = require('./api/routes/taskRoutes')
+const User = require("./api/models/UserModel")
 
 mongoose.connect(
     'mongodb+srv://WebHouse:max2666z!@cluster0.a6krzpb.mongodb.net/?retryWrites=true&w=majority',
