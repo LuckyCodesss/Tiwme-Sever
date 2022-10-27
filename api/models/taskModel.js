@@ -4,11 +4,11 @@ const { Schema } = mongoose;
 
 const taskSchema = new Schema(
     {
-        pictureUser: {
+        task1: {
             type: String,
             required: 'pictrue cannot be blank'
         },
-        username: {
+        task2: {
             type: String,
             required: 'username cannot be blank'
         },
