@@ -13,6 +13,7 @@ const taskSchema = new Schema(
             required: 'username cannot be blank'
         },
     },
+    { collection: 'task'}
 )
 
 module.exports = mongoose.model('task', taskSchema)
