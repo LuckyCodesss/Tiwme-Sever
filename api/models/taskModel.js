@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const taskSchema = new Schema(
     {
-        task1: {
+        name: {
             type: String,
             required: 'pictrue cannot be blank'
         },
@@ -13,7 +13,6 @@ const taskSchema = new Schema(
             required: 'username cannot be blank'
         },
     },
-    { collection: 'task'}
 )
 
 module.exports = mongoose.model('task', taskSchema)
