@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
 const toolSchema = new mongoose.Schema({
-    name: String,
-    surname: String,
-    age: Number,
-    createat: Date,
-    updateat: Date,
-    hobby: [String],
+    toolName: String,
+    pictool: String,
+    description: [String],
     vote: Number
 })
 

@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
 const communitySchema = new mongoose.Schema({
-    name: String,
-    surname: String,
-    age: Number,
-    createat: Date,
-    updateat: Date,
-    hobby: [String],
+    pic: String,
+    head: String,
+    description: [String],
     vote: Number
 })
 
