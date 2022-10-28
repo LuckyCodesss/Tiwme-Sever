@@ -7,8 +7,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    createat: Date,
-    updateat: Date,
     hobby: [String],
     id: mongoose.SchemaTypes.ObjectId,
     project: projectSchema,
