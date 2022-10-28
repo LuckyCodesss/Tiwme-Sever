@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const toolSchema = new mongoose.Schema({
     name: String,
     surname: String,
     age: Number,
@@ -10,4 +10,4 @@ const userSchema = new mongoose.Schema({
     vote: Number
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Tool', toolSchema)
