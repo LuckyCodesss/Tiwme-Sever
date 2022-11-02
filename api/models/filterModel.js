@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const filterSchema = new mongoose.Schema({
-    name: String,
-    surname: String,
+    firstName: {type: String},
+    lastName: {type: String},
     age: Number,
     createat: Date,
     updateat: Date,

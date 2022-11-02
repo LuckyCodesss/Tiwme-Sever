@@ -14,11 +14,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    hobby: [
-        {
-            type: String
-        }
-        ],
+    hobby: [{type: String}],
     pic:{type: String}
 })
 
