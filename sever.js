@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-global.Task = require('./api/models/taskModel')
-const routes = require('./api/routes/taskRoutes')
-const User = require("./api/models/UserModel")
-
 mongoose.connect(
-    'mongodb+srv://WebHouse:max2666z!@cluster0.a6krzpb.mongodb.net/?retryWrites=true&w=majority',
+    'mongodb+srv://WebHouse:max2666z!@cluster0.a6krzpb.mongodb.net/fifa?retryWrites=true&w=majority',
     { useNewUrlParser: true }
 )
+
+const bodyParser = require('body-parser');
+//global.Task = require('./api/models/taskModel')
+//const routes = require('./api/routes/taskRoutes')
+global.User = require("./api/models/UserModel")
+const userRoutes = require('./api/routes/userRoutes')
 
 const port = process.env.port || 9999;
 const app = express();
@@ -18,7 +19,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-routes(app);
+userRoutes(app);
 app.listen(port);
 
 app.use((req, res) => {

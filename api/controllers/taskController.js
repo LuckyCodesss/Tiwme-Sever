@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const task = mongoose.model('task');
+const user = mongoose.model('User');
 
 exports.list_all_tasks = (req, res) => {
     task.find({}, (err, tasks) => {
