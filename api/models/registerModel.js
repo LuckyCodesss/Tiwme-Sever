@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 const registerSchema = new mongoose.Schema({
-    firstname: {
+    fullname: {
         type: String,
         required: true
     },
