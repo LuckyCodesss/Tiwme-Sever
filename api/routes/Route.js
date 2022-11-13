@@ -10,4 +10,6 @@ module.exports = app => {
         .get(ub.read)
         .put(ub.update)
         .delete(ub.delete);
+    app
+        
 }
