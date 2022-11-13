@@ -11,7 +11,6 @@ exports.list_all = (req, res) => {
 
 exports.create = (req, res) => {
     const newuser = new user(req.body);
-    const newproject = new project(req.body);
     const newcommunity = new community(req.body);
 
     newuser.save((err, user) => {

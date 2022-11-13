@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const tool = mongoose.model('tool');
+const tool = mongoose.model('Tool');
 
 exports.list_all = (req, res) => {
     tool.find({}, (err, tools) => {
