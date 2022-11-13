@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const user = mongoose.model('User');
-const project = mongoose.model('Project');
 const community = mongoose.model('Community');
 
 exports.list_all = (req, res) => {
