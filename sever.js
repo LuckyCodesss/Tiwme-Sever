@@ -7,15 +7,11 @@ mongoose.connect(
 )
 
 const bodyParser = require('body-parser');
-//global.Task = require('./api/models/taskModel')
-//const routes = require('./api/routes/taskRoutes')
 global.User = require("./api/models/UserModel")
-global.Register = require("./api/models/registerModel")
 global.Project = require("./api/models/projectModel")
 global.Community = require("./api/models/communityModel")
 global.Tool = require("./api/models/toolModel")
 const userRoutes = require('./api/routes/UserRoutes')
-const registerRoutes = require('./api/routes/RegisterRoutes')
 const projectRoutes = require('./api/routes/ProjectRoutes')
 const communityRoutes = require('./api/routes/CommunityRoutes')
 const toolRoutes = require('./api/routes/ToolRoutes')
@@ -28,7 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 userRoutes(app);
-registerRoutes(app);
 projectRoutes(app);
 communityRoutes(app);
 toolRoutes(app);
