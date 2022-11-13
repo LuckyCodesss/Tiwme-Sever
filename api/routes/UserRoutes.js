@@ -1,13 +1,13 @@
-const userBuilder = require('../controllers/userController');
+const ub = require('../controllers/userController');
 
 module.exports = app => {
     app
         .route('/users')
-        .get(userBuilder.list_all)
-        .post(userBuilder.create);
+        .get(ub.list_all)
+        .post(ub.create);
     app
         .route('/users/:userId')
-        .get(userBuilder.read)
-        .put(userBuilder.update)
-        .delete(userBuilder.delete);
+        .get(ub.read)
+        .put(ub.update)
+        .delete(ub.delete);
 }
