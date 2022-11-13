@@ -14,7 +14,6 @@ global.Tool = require("./api/models/toolModel")
 const userRoutes = require('./api/routes/UserRoutes')
 const projectRoutes = require('./api/routes/ProjectRoutes')
 const communityRoutes = require('./api/routes/CommunityRoutes')
-const toolRoutes = require('./api/routes/ToolRoutes')
 
 const port = process.env.port || 9999;
 const app = express();
@@ -26,7 +25,6 @@ app.use(bodyParser.json())
 userRoutes(app);
 projectRoutes(app);
 communityRoutes(app);
-toolRoutes(app);
 app.listen(port);
 
 app.use((req, res) => {
