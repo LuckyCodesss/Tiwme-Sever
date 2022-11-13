@@ -10,7 +10,6 @@ const bodyParser = require('body-parser');
 global.User = require("./api/models/UserModel")
 global.Project = require("./api/models/projectModel")
 global.Community = require("./api/models/communityModel")
-global.Tool = require("./api/models/toolModel")
 const userRoutes = require('./api/routes/UserRoutes')
 const projectRoutes = require('./api/routes/ProjectRoutes')
 const communityRoutes = require('./api/routes/CommunityRoutes')

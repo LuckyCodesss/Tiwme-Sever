@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 const userSchema = new mongoose.Schema({
     firstName: {
@@ -20,7 +19,13 @@ const userSchema = new mongoose.Schema({
     },
     bio: {
         type: String
-    }
+    },
+    toolName: {
+        type: String
+    },
+    pictool: {type: String},
+    description: {type: String},
+    vote: {type: Number}
 })
 
 module.exports = mongoose.model('User', userSchema)
