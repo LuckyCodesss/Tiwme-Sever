@@ -1,4 +1,4 @@
-const ub = require('../controllers/userController');
+const ub = require('../controllers/allController');
 
 module.exports = app => {
     app
