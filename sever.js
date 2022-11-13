@@ -10,9 +10,7 @@ const bodyParser = require('body-parser');
 global.User = require("./api/models/UserModel")
 global.Tool = require("./api/models/toolModel")
 global.Community = require("./api/models/communityModel")
-const userRoutes = require('./api/routes/UserRoutes')
-const toolRoutes = require('./api/routes/ToolRoutes')
-const communityRoutes = require('./api/routes/CommunityRoutes')
+const Route = require('./api/routes/Route')
 
 const port = process.env.port || 9999;
 const app = express();
@@ -21,9 +19,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-userRoutes(app);
-toolRoutes(app);
-communityRoutes(app);
+Route(app);
 app.listen(port);
 
 app.use((req, res) => {
