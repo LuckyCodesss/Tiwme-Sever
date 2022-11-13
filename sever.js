@@ -8,10 +8,10 @@ mongoose.connect(
 
 const bodyParser = require('body-parser');
 global.User = require("./api/models/UserModel")
-global.Project = require("./api/models/projectModel")
+global.Tool = require("./api/models/toolModel")
 global.Community = require("./api/models/communityModel")
 const userRoutes = require('./api/routes/UserRoutes')
-const projectRoutes = require('./api/routes/ProjectRoutes')
+const toolRoutes = require('./api/routes/ToolRoutes')
 const communityRoutes = require('./api/routes/CommunityRoutes')
 
 const port = process.env.port || 9999;
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 userRoutes(app);
-projectRoutes(app);
+toolRoutes(app);
 communityRoutes(app);
 app.listen(port);
 

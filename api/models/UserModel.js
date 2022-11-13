@@ -20,12 +20,15 @@ const userSchema = new mongoose.Schema({
     bio: {
         type: String
     },
-    toolName: {
+    projectName: {
         type: String
     },
-    pictool: {type: String},
-    description: {type: String},
-    vote: {type: Number}
+    description: {
+        type: String
+    },
+    vote: {
+        type: Number
+    }
 })
 
 module.exports = mongoose.model('User', userSchema)
