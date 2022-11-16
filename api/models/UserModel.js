@@ -20,7 +20,12 @@ const userSchema = new mongoose.Schema({
     bio: {
         type: String
     },
-    project: [Schema.Types.ObjectId]
+    project: [
+        {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "project"
+        }
+    ]
 })
 
 module.exports = mongoose.model('User', userSchema)
