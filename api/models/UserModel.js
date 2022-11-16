@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema({
     },
     bio: {
         type: String
-    }
+    },
+    project: [Schema.Types.ObjectId]
 })
 
 module.exports = mongoose.model('User', userSchema)
