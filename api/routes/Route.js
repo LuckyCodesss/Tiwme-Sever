@@ -11,6 +11,15 @@ module.exports = app => {
         .put(ub.update_user)
         .delete(ub.delete_user);
     app
+        .route('/projects')
+        .get(ub.list_all_project)
+        .post(ub.create_project);
+    app
+        .route('/projects/:projectId')
+        .get(ub.read_project)
+        .put(ub.update_project)
+        .delete(ub.delete_project);
+    app
         .route('/tools')
         .get(ub.list_all_tool)
         .post(ub.create_tool);
