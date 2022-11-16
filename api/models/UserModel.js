@@ -19,15 +19,6 @@ const userSchema = new mongoose.Schema({
     },
     bio: {
         type: String
-    },
-    projectName: {
-        type: String
-    },
-    description: {
-        type: String
-    },
-    vote: {
-        type: Number
     }
 })
 

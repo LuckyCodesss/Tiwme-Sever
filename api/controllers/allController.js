@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const user = mongoose.model('User');
+const project = mongoose.model('Project');
 const tool = mongoose.model('Tool');
 const community = mongoose.model('Community');
 
@@ -10,6 +11,12 @@ exports.list_all_user = (req, res) => {
     user.find({}, (err, users) => {
         if (err) res.send(err);
         res.json(users);
+    })
+}
+exports.list_all_project = (req, res) => {
+    project.find({}, (err, projects) => {
+        if (err) res.send(err);
+        res.json(projects);
     })
 }
 exports.list_all_tool = (req, res) => {
@@ -33,6 +40,13 @@ exports.create_user = (req, res) => {
     newuser.save((err, user) => {
         if (err) res.send(err);
         res.json(user);
+    })
+}
+exports.create_project = (req, res) => {
+    const newproject = new project(req.body);
+    newproject.save((err, project) => {
+        if (err) res.send(err);
+        res.json(project);
     })
 }
 exports.create_tool = (req, res) => {
@@ -59,6 +73,12 @@ exports.read_user = (req, res) => {
         res.json(user);
     })
 }
+exports.read_project = (req, res) => {
+    project.findById(req.params.projectId, (err, project) => {
+        if (err) res.send(err);
+        res.json(project);
+    })
+}
 exports.read_tool = (req, res) => {
     tool.findById(req.params.toolId, (err, tool) => {
         if (err) res.send(err);
@@ -83,6 +103,17 @@ exports.update_user = (req, res) => {
         (err, user) => {
             if (err) res.send(err);
             res.json(user);
+        }
+    )
+}
+exports.update_project = (req, res) => {
+    project.findOneAndUpdate(
+        { _id: req.params.projectId },
+        req.body,
+        { new: true },
+        (err, project) => {
+            if (err) res.send(err);
+            res.json(project);
         }
     )
 }
@@ -118,6 +149,15 @@ exports.delete_user = (req, res) => {
         res.json({
             message: 'user succesfully deleted',
             _id: req.params.userId
+        })
+    })
+}
+exports.delete_project = (req, res) => {
+    project.deleteOne({ _id: req.params.projectId }, err => {
+        if (err) res.send(err);
+        res.json({
+            message: 'project succesfully deleted',
+            _id: req.params.projectId
         })
     })
 }

@@ -8,6 +8,7 @@ mongoose.connect(
 
 const bodyParser = require('body-parser');
 global.User = require("./api/models/UserModel")
+global.Project = require("./api/models/projectModel")
 global.Tool = require("./api/models/toolModel")
 global.Community = require("./api/models/communityModel")
 const Route = require('./api/routes/Route')
