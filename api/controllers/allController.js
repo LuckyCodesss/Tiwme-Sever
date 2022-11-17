@@ -12,6 +12,7 @@ exports.list_all_user = (req, res) => {
         if (err) res.send(err);
         res.json(users);
     })
+    res.render("user",{users:user})
 }
 exports.list_all_project = (req, res) => {
     project.find({}, (err, projects) => {
