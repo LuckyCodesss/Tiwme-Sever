@@ -1,0 +1,24 @@
+.rightnav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.profile{
+
+    display: flex;
+    flex-direction: row;
+    word-spacing: 30px;
+}
+.search-container{
+    display: flex;
+    flex-direction: row;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    
+}
+a {
+    text-decoration: none ;
+    color: black;
+}
